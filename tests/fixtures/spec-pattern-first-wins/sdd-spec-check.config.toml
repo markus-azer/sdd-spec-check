@@ -1,0 +1,10 @@
+specs = ["spec/**/*.md"]
+tests = ["test/**/*.ts"]
+
+# Both patterns match the same spec line. The first one captures just the
+# leading word; the second would capture the full sentence. The first
+# pattern must win - otherwise the spec text won't match the test text.
+spec_patterns = [
+  '^-\s+\[(?<id>RULE-[A-Z0-9-]+)\]\s+(?<text>\w+)',
+  '^-\s+\[(?<id>RULE-[A-Z0-9-]+)\]\s+(?<text>.+)$',
+]

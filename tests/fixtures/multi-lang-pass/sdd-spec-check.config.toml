@@ -1,0 +1,6 @@
+specs = ["spec/**/*.md"]
+tests = [
+  "test/**/*.test.ts",
+  "test/**/*_test.py",
+  "test/**/*_test.go",
+]

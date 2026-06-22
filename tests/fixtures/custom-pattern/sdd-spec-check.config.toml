@@ -1,0 +1,6 @@
+specs = ["spec/**/*.md"]
+tests = ["test/**/*.rs"]
+
+test_patterns = [
+  '#\[doc\s*=\s*"(?<id>RULE-[A-Z0-9-]+):\s+(?<text>[^"]*?)"\]',
+]
