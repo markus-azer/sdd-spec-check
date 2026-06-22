@@ -1,0 +1,31 @@
+# Where spec rules live. Markdown. One rule per bullet.
+specs = ["spec/**/*.md"]
+
+# Where tests live. Mix languages freely.
+tests = [
+  "test/**/*.test.ts",
+  "tests/**/*_test.py",
+  "src/**/*_test.go",
+]
+
+# Optional. Override the default spec rule pattern.
+# Must capture named groups `id` and `text`.
+#
+# Default matches `- [RULE-X] text` in Markdown bullets.
+#
+# spec_patterns = ['^-\s+\[(?<id>RULE-[A-Z0-9-]+)\]\s+(?<text>.+)$']
+
+# Optional. Override the default citation patterns.
+# Each pattern must capture named groups `id` and `text`.
+#
+# Defaults find "RULE-X: text" inside double, single, or backtick quotes.
+#
+# test_patterns = [
+#   '"(?<id>RULE-[A-Z0-9-]+):\s+(?<text>[^"]*?)"',
+# ]
+
+# Strictness knobs. "error" fails the run, "warn" prints, "silent" hides.
+on_empty_glob    = "warn"
+on_unknown_id    = "error"
+on_missing_test  = "error"
+on_text_mismatch = "error"
